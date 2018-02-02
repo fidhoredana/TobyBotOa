@@ -7,8 +7,8 @@ Support by : Mastah Ervan
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'zz+WoridogVzQt9IdimWXW6hA0gqCli5ncbZudy1i1pnErda1IAVzlAE10c4yNejE+NOHhYdoyQBcBpTz33MXkZak6qZVumNa+8Ie7tAUxPHswfaGHKfqaEhwCvLijQlsBWgKwKxNKSlb44WfYWaOQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = '7c5827683d1cad89264239c86f59f4fa';//sesuaikan
+$channelAccessToken = 'LcoUOBJmqIK4w96/pIyESrVdVdxxOald3QOoW+B/Fyey0UquOWLglRuzA7e40Zg98X5Gn7T/2Y1rNIu9uRLosOsWjLD/Cp8RXN7aZUCT/AmY/CBW2QDu3rJvwoV6+uMUmHdvr0+dPznvG9w/EdAuKgdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '0a3eecaf6be1f54b4cf61598c3e7449e';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
