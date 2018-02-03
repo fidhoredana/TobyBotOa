@@ -176,24 +176,15 @@ function saveitoffline($keyword) {
 
 
     $json = json_decode($response->raw_body, true);
-	$result = "Judul : ";
-	$result .= $json['title'];
-	$result .= "\n\nUkuran : ";
-	$result .= $json['urls'][0]['label'];
-	$result .= "\nURL Download : ";
-	$result .= $json['urls'][0]['id'];
-	$result .= "\n\nUkuran : ";
-	$result .= $json['urls'][1]['label'];
-	$result .= "\nURL Download : ";
-	$result .= $json['urls'][1]['id'];
-	$result .= "\n\nUkuran : ";
-	$result .= $json['urls'][2]['label'];	
-	$result .= "\nURL Download : ";
-	$result .= $json['urls'][2]['id'];
-	$result .= "\n\nUkuran : ";
-	$result .= $json['urls'][3]['label'];	
-	$result .= "\nURL Download : ";
-	$result .= $json['urls'][3]['id'];	
+	$result['judul'] .= $json['title'];
+	$result['uk0'] .= $json['urls'][0]['label'];
+	$result['url0'] .= $json['urls'][0]['id'];
+	$result['uk1'] .= $json['urls'][1]['label'];
+	$result['url1'] .= $json['urls'][1]['id'];
+	$result['uk2'] .= $json['urls'][2]['label'];	
+	$result['url2'] .= $json['urls'][2]['id'];
+	$result['uk3'] .= $json['urls'][3]['label'];	
+	$result['url3'] .= $json['urls'][3]['id'];	
     return $result;
 }
 #-------------------------[Fungsi MUSIK]-------------------------#
