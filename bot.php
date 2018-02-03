@@ -1332,12 +1332,12 @@ if($message['type']=='text') {
                             array(
                                 'type' => 'uri',
                                 'label' => 'Isi Steam Wallet',
-                                'uri' => https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Steam Wallet%0AMohon Penjelasannya
+                                'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Steam Wallet%0AMohon Penjelasannya'
                             ),
                             array(
                                 'type' => 'uri',
                                 'label' => 'Isi Steam Wallet - USD',
-                                'uri' => https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Steam Wallet - USD%0AMohon Penjelasannya
+                                'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Steam Wallet - USD%0AMohon Penjelasannya'
                             ),
                         ),
                     ),
@@ -1674,9 +1674,9 @@ Dosanya Ucok'
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Toko Ocelot',
+													'label' => 'Reset BOT',
 													'data' => 'action=add&itemid=111',
-													'text' => '/toko'
+													'text' => '/reset'
 										          ),
 										        ),
 										      ),
