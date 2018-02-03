@@ -1674,9 +1674,9 @@ Dosanya Ucok'
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Reset BOT',
+													'label' => 'Toko Ocelot',
 													'data' => 'action=add&itemid=111',
-													'text' => '/reset'
+													'text' => '/toko'
 										          ),
 										        ),
 										      ),
