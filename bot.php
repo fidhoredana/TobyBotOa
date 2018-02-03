@@ -678,7 +678,7 @@ if($message['type']=='text') {
             'messages' => array(
                 array(
                     'type' => 'audio',
-                    'originalContentUrl'  => $result['musik']
+                    'originalContentUrl'  => $result['musik'],
 		    'duration' => $result['durasi']
                 ),
             )
