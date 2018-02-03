@@ -72,8 +72,7 @@ function jawabs(){
 		'Tentu Tidak',	    
 		'Bisa jadi',
 		'Mungkin',
-		'Coba tanya lagi',
-		'lebih keras',	    
+		'Coba tanya lagi',    
 		'Coba sekali lagi'
 		);
     $jaws = array_rand($list_jwb);
@@ -736,7 +735,8 @@ else{
 								array(
 										'type' => 'text',					
 										'text' => 'BOT Ocelot sudah kembali //normal ya!
-Ketik /help untuk melihat Fitur asyik BOT
+Ketik 
+untuk melihat Fitur asyik BOT
 Ketik /keyword untuk melihat kemampuan Ocelot ya!'
 									)
 							)
@@ -1177,6 +1177,203 @@ if($message['type']=='text') {
                                 'type' => 'uri',
                                 'label' => 'Line Developer',
                                 'uri' => 'http://line.me/R/ti/p/%40qua3481v'
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        );
+    } else {}
+} else {}
+if($message['type']=='text') {
+    if ($command_datang == '/mlshop') {
+	        $balas = array(
+							'replyToken' => $replyToken,
+							'messages' => array(
+								array (
+										  'type' => 'template',
+										  'altText' => 'Mobile Legends',
+										  'template' => 
+										  array (
+										    'type' => 'carousel',
+										    'columns' => 
+										    array (
+										      0 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://d1qgcmfii0ptfa.cloudfront.net/S/content/common/images/mno/ML-logo-300.png?v=912',
+										        'title' => 'Mobile Legends',
+										        'text' => 'Silahkan pilih salah satu sesuai kebutuhan kamu',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Top Up Diamond',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Top Up Diamond Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Beli SKIN',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membeli SKIN Hero Mobile Legends%0AMohon Penjelasannya'
+												  ),
+										          2 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Buat Skuad',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membuat SKUAD Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										        ),
+										      ),
+										      1 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://d1qgcmfii0ptfa.cloudfront.net/S/content/common/images/mno/ML-logo-300.png?v=912',
+										        'title' => 'Mobile Legends',
+										        'text' => 'Silahkan pilih salah satu sesuai kebutuhan kamu',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Starlight Member',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membeli Starlight member Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Seasonal Starlight Member',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membeli Seasonal Starlight member Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										          2 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'MPL Victory',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membeli MPL Victory Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										        ),
+										      ),
+										      2 => 
+										      array (
+										        'thumbnailImageUrl' => 'https://d1qgcmfii0ptfa.cloudfront.net/S/content/common/images/mno/ML-logo-300.png?v=912',
+										        'title' => 'Mobile Legends',
+										        'text' => 'Silahkan pilih salah satu sesuai kebutuhan kamu',
+										        'actions' => 
+										        array (
+										          0 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'MPL Glory',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membeli MPL Glory Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Beli Akun ML',
+													'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin membeli Akun Mobile Legends%0AMohon Penjelasannya'
+										          ),
+										          2 => 
+										          array (
+													'type' => 'postback',
+													'label' => 'Jasa JOKI',
+													'data' => 'action=add&itemid=111',
+													'text' => 'Mohon maaf, Jasa Joki ML sedang tidak tersedia, kami akan memberitahunya jika sudah tersedia'
+										          ),
+										        ),
+										      ),
+										    ),
+										  ),
+										)					
+			 
+        )
+    );
+	}
+	
+}
+if($message['type']=='text') {
+    if ($command_datang == '/psshop') {
+            $balas = array(
+                'replyToken' => $replyToken,
+                'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Play Store Shop',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Play Store Shop',
+                        'thumbnailImageUrl' => 'https://d1qgcmfii0ptfa.cloudfront.net/S/content/common/images/mno/google-play-gift-code-card-300x193.png?v=912',
+                        'text' => 'Isi saldo Google Play Store lebih gampang dan Murah dengan Ocelot!',
+                        'actions' => array(
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Isi Saldo Play Store',
+                                'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Google play Store%0AMohon Penjelasannya'
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        );
+    } else {}
+} else {}
+if($message['type']=='text') {
+    if ($command_datang == '/swshop') {
+            $balas = array(
+                'replyToken' => $replyToken,
+                'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Play Store Shop',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Play Store Shop',
+                        'thumbnailImageUrl' => 'https://d1qgcmfii0ptfa.cloudfront.net/S/content/common/images/steam-new-300x193.png?v=912',
+                        'text' => 'Isi saldo Steam Wallet lebih gampang dan Murah dengan Ocelot!',
+                        'actions' => array(
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Isi Steam Wallet',
+                                'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Steam Wallet%0AMohon Penjelasannya'
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Isi Steam Wallet - USD',
+                                'uri' => 'https://api.whatsapp.com/send?phone=6283167962202&text=Halo admin Ocelot...%0ASaya ingin Isi Saldo Steam Wallet - USD%0AMohon Penjelasannya'
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        );
+    } else {}
+} else {}
+if($message['type']=='text') {
+    if ($command_datang == '/toko') {
+            $balas = array(
+                'replyToken' => $replyToken,
+                'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Ocelot Online Shop',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Ocelot Online Shop',
+                        'thumbnailImageUrl' => 'https://fmedia.000webhostapp.com/img/toko.png',
+                        'text' => 'Pilih salah satu game untuk berbelanja kebutuhanmu',
+                        'actions' => array(
+                            array(
+                                'type' => 'message',
+                                'label' => 'Mobile Legends',
+                                'text' => '/mlshop'
+                            ),
+                            array(
+                                'type' => 'message',
+                                'label' => 'Play Store',
+                                'text' => '/psshop'
+                            ),
+                            array(
+                                'type' => 'message',
+                                'label' => 'Steam Wallet',
+                                'text' => '/swshop'
                             ),
                         ),
                     ),
