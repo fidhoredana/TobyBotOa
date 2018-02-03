@@ -580,7 +580,7 @@ if($message['type']=='text') {
     }
 
 }
-if($message['type']=='text') {
+/* if($message['type']=='text') {
 	    if ($command == '/convert' || $command == '/Convert') {
 
         $result = saveitoffline($options);
@@ -595,7 +595,54 @@ if($message['type']=='text') {
         );
     }
 
-}
+} */
+if ($command == '/convert' || $command == '/Convert') {
+        $result = saveitoffline($options);
+        $altText = "Convert Done.";
+        $teks = "Judul : " . $result['judul'];
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => $altText,
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Silahkan Download',
+                        'thumbnailImageUrl' => 'https://fmedia.000webhostapp.com/img/convert.png',
+                        'text' => $teks,
+                        'actions' => array(
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download : '. $result['uk0'],
+								'uri' => $result['url0']
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download : '. $result['uk1'],
+								'uri' => $result['url1']
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download : '. $result['uk2'],
+								'uri' => $result['url2']
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download : '. $result['uk3'],
+								'uri' => $result['url3']
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download : '. $result['uk4'],
+								'uri' => $result['url4']
+                            )
+                        )
+                    )
+                )
+            )
+        );
+    }
 if ($command == '/anime-syn') {
 		$get_sub = array();
         $result = anime_syn($options);
