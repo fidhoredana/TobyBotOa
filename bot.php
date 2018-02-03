@@ -199,6 +199,16 @@ function musik($keyword) {
     $result['donlod'] .= $json['0']['4'];
     return $result; 
 }
+function denger($keyword) { 
+    $uri = "http://ide.fdlrcn.com/workspace/yumi-apis/joox?songname=" . $keyword . ""; 
+ 
+    $response = Unirest\Request::get("$uri"); 
+ 
+    $json = json_decode($response->raw_body, true); 
+    $result['durasi'] .= $json['0']['2'];
+    $result['musik'] .= $json['0']['3'];
+    return $result; 
+}
 function musikbiasa($keyword) { 
     $uri = "http://ide.fdlrcn.com/workspace/yumi-apis/joox?songname=" . $keyword . ""; 
  
@@ -606,28 +616,23 @@ if ($command == '/convert' || $command == '/Convert') {
                             array(
                                 'type' => 'uri',
                                 'label' => 'Download : '. $result['uk0'],
-								'uri' => $result['url0']
+				'uri' => $result['url0']
                             ),
                             array(
                                 'type' => 'uri',
                                 'label' => 'Download : '. $result['uk1'],
-								'uri' => $result['url1']
+				'uri' => $result['url1']
                             ),
                             array(
                                 'type' => 'uri',
                                 'label' => 'Download : '. $result['uk2'],
-								'uri' => $result['url2']
+				'uri' => $result['url2']
                             ),
                             array(
                                 'type' => 'uri',
                                 'label' => 'Download : '. $result['uk3'],
-								'uri' => $result['url3']
+				'uri' => $result['url3']
                             ),
-                            array(
-                                'type' => 'uri',
-                                'label' => 'Download : '. $result['uk4'],
-								'uri' => $result['url4']
-                            )
                         )
                     )
                 )
@@ -649,7 +654,7 @@ if ($command == '/anime-syn') {
         );
     }
 /* if($message['type']=='text') {
-	    if ($command == '/musik' || $command == '/Musik') {
+	    if ($command == '/muskkkk' || $command == '/Muskkkk') {
 
         $result = musikbiasa($options);
         $balas = array(
@@ -664,6 +669,23 @@ if ($command == '/anime-syn') {
     }
 
 } */
+if($message['type']=='text') {
+	    if ($command == '/denger' || $command == '/denger') {
+
+        $result = denger($options);
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'audio',
+                    'originalContentUrl'  => $result['musik']
+		    'duration' => $result['durasi']
+                ),
+            )
+        );
+    }
+
+}
 if ($command == '/musik') {
         $result = musik($say);
         $altText = $result['judul'];
