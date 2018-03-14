@@ -1741,31 +1741,29 @@ Dosanya Ucok'
 										      ),
 										      6 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://fmedia.000webhostapp.com/img/lainnya.png',
-										        'title' => 'Lainnya',
-										        'text' => 'Menu Lainnya',
+										        'thumbnailImageUrl' => 'https://fmedia.000webhostapp.com/img/fidhoredana.png',
+										        'title' => 'Fidho Redana - Youtube',
+										        'text' => 'Semua Tutorial Ada Disini!',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Ocelot Ngomong',
-										            'data' => 'action=add&itemid=111',
-													'text' => 'Ketik /say [Kata kata]'
+										            'type' => 'uri',
+										            'label' => 'SUBSCRIBE',
+													'uri' => 'https://www.youtube.com/c/fidhoredana?sub_confirmation=1'
 										          ),
 										          1 => 
 										          array (
-													'type' => 'postback',
-													'label' => 'Trik Sulap',
-													'data' => 'action=add&itemid=111',
-													'text' => '/magic'
+													'type' => 'uri',
+													'label' => 'Fidho Tutorial',
+													'uri' => 'https://www.youtube.com/watch?v=6nPcT5fD0UY&list=PLQ2cGwd9Jkng2DQQtPcQxDu321AdA4Uhn&index=2'
 										          ),
 										          2 => 
 										          array (
 													'type' => 'postback',
-													'label' => 'Reset BOT',
+													'label' => 'Fidho MOD',
 													'data' => 'action=add&itemid=111',
-													'text' => '/reset'
+													'text' => '/fidhomod'
 										          ),
 										        ),
 										      ),
@@ -1842,13 +1840,13 @@ if ($command == '/anime') {
         );
     }
 if($message['type']=='text') {
-    if ($command_datang == '/kebud') {
+    if ($command_datang == '/fidhomod') {
 	        $balas = array(
 							'replyToken' => $replyToken,
 							'messages' => array(
 								array (
 										  'type' => 'template',
-										  'altText' => 'Menu',
+										  'altText' => 'Fidho MOD',
 										  'template' => 
 										  array (
 										    'type' => 'carousel',
@@ -1856,53 +1854,66 @@ if($message['type']=='text') {
 										    array (
 										      0 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://9to5google.files.wordpress.com/2017/03/googletranslate-900x420.jpg?quality=82&strip=all&w=900&strip=all&w=1600&h=1000',
-										        'title' => 'Translate',
-										        'text' => 'Fitur translate yang sangat pintar!',
+										        'thumbnailImageUrl' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGQKS866VXl5F4fVTb2_-B8BXMLC08Hmpi3eBAzAnADk3UiYndIA',
+										        'title' => 'Free Fire MEGA MOD APK',
+										        'text' => 'Free Fire 1.13.0 MEGA MOD APK ANTI BANNED!',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Translate',
-										            'data' => 'action=add&itemid=111',
-													'text' => '/translate'
+										            'type' => 'uri',
+										            'label' => 'Tutorial Pemasangan',
+													'uri' => 'https://www.youtube.com/watch?v=V8wyncTaeu0&t'
+										          ),
+											  1 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Download',
+													'uri' => 'http://www.fidhomod.tk/2018/03/free-fire-mod-apk-1130-mega-hack.html'
 										          ),
 										        ),
 										      ),
 										      1 => 
 										      array (
-										        'thumbnailImageUrl' => 'https://speckyboy.com/wp-content/uploads/2013/05/quote_illustration_01.jpg',
-										        'title' => '- Quotes Of The Day -',
-										        'text' => 'Ocelot punya ribuan Quotes lho!',
+										        'thumbnailImageUrl' => 'https://d1qgcmfii0ptfa.cloudfront.net/S/content/common/images/mno/ML-logo-300.png?v=952',
+										        'title' => 'Mobile Legends MOD APK',
+										        'text' => 'Mobile Legends: Bang Bang MOD APK 1.2.56.2551 ANTI BANNED!',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
-										            'type' => 'postback',
-										            'label' => 'Cek Quotes',
-										            'data' => 'action=add&itemid=111',
-													'text' => '/quote'
+										            'type' => 'uri',
+										            'label' => 'Tutorial Pemasangan',
+													'uri' => 'https://www.youtube.com/watch?v=S_WX_CyqE4M&t'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'uri',
+										            'label' => 'Download',
+													'uri' => 'http://www.fidhomod.tk/2018/03/halo-sobat-fidho-redana-yang-tercintaaa.html'
 										          ),
 										        ),
 										      ),
 										      2 => 
 										      array (
-										        'thumbnailImageUrl' => 'http://www.enolsoft.com/images-new/appicons/youtube-converter-hd-icon256.png',
-										        'title' => 'Video Converter',
-										        'text' => 'Kini, bisa download video Youtube lewat Ocelot lho!',
+										        'thumbnailImageUrl' => 'http://fmedia.000webhostapp.com/img/fidhomod.png',
+										        'title' => 'BUG dan MASALAH',
+										        'text' => 'Menemukan BUG atau MASALAh pada MO? Tanya disini!',
 										        'actions' => 
 										        array (
 										          0 => 
 										          array (
 										            'type' => 'postback',
-										            'label' => 'Convert Video',
+										            'label' => 'BANTUAN',
 										            'data' => 'action=add&itemid=111',
-													'text' => 'Cara Convert Video Youtube
-Ketik
-/convert [Link Video YT]
-Contoh:
-/convert https://www.youtube.com/watch?v=5SaONVt5bDI'
+													'text' => '/bantuanfidhomod'
+										          ),
+										          1 => 
+										          array (
+										            'type' => 'postback',
+										            'label' => 'BANTUAN',
+										            'data' => 'action=add&itemid=111',
+													'text' => '/bantuanfidhomod'
 										          ),
 										        ),
 										      ),											  
@@ -1915,6 +1926,107 @@ Contoh:
 	}
 	
 }
+if ($command == '/bantuanfidhomod') {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Bantuan FidhoMOD',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Bantuan FihoMOD',
+                        'thumbnailImageUrl' => 'https://http://fmedia.000webhostapp.com/img/fidhomod.png',
+                        'text' => 'Silakan Pilih Game',
+                        'actions' => array(
+                            array(
+                                'type' => 'postback',
+				'label' => 'Free Fire',
+				'data' => 'action=add&itemid=111',
+				'text' => '/bantuanfidhomodff'
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Mobile Legends',
+				'data' => 'action=add&itemid=111',
+				'text' => '/bantuanfidhomodmlbb'
+                            ),
+                        )
+                    )
+                )
+            )
+        );
+    }
+if ($command == '/bantuanfidhomodmlbb') {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Bantuan MOD MLBB',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Bantuan MOD MLBB',
+                        'thumbnailImageUrl' => 'https://http://fmedia.000webhostapp.com/img/fidhomod.png',
+                        'text' => 'Silakan Pilih Salah Satu Pertanyaan',
+                        'actions' => array(
+                            array(
+                                'type' => 'postback',
+				'label' => 'MOD Sering LAGGING',
+				'data' => 'action=add&itemid=111',
+				'text' => '- Periksa koneksi internet mu
+- Bersihkan aplikasi, video, foto yang tidak terpakai
+- Hapus Cache Game Mobile Legends di Pengaturan
+- Jika masih berlanjut, kirim email ke:
++ Fidhoredanabusiness@gmail.com'
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download Failed',
+				'data' => 'action=add&itemid=111',
+				'text' => '- Download dan Pakai data OBB MOD yang di sediakan di Website fidhomod.tk'
+                            ),
+                        )
+                    )
+                )
+            )
+        );
+    }
+if ($command == '/bantuanfidhomodff') {
+        $balas = array(
+            'replyToken' => $replyToken,
+            'messages' => array(
+                array(
+                    'type' => 'template',
+                    'altText' => 'Bantuan MOD Free Fire',
+                    'template' => array(
+                        'type' => 'buttons',
+                        'title' => 'Bantuan MOD Free Fire',
+                        'thumbnailImageUrl' => 'https://http://fmedia.000webhostapp.com/img/fidhomod.png',
+                        'text' => 'Silakan Pilih Salah Satu Pertanyaan',
+                        'actions' => array(
+                            array(
+                                'type' => 'postback',
+				'label' => 'MOD Sering LAGGING',
+				'data' => 'action=add&itemid=111',
+				'text' => '- Periksa koneksi internet mu
+- Bersihkan aplikasi, video, foto yang tidak terpakai
+- Hapus Cache Game Free Fire di Pengaturan
+- Jika masih berlanjut, kirim email ke:
++ Fidhoredanabusiness@gmail.com'
+                            ),
+                            array(
+                                'type' => 'uri',
+                                'label' => 'Download Failed',
+				'data' => 'action=add&itemid=111',
+				'text' => '- Download dan Pakai data OBB MOD yang di sediakan di Website fidhomod.tk'
+                            ),
+                        )
+                    )
+                )
+            )
+        );
+    }
 if($message['type']=='text') {
     if ($command_datang == '/kebodlama') {
             $balas = array(
