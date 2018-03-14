@@ -9,8 +9,8 @@ Developed @ Fidho Redana
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'JmjwbCYHoXpAwb/aNMESR72J6KuT7eAkAP9YI69J1ptNu/Qg6zxf97ZKcOEDhLveTaXT9BGiIMXiPZMrJ004kA3bs0IGa/e3TC9CF5hCIBOMgQqewl2MI/ZpQxzGu9DbEIy+kE2Tgm1gByXhSw+tJAdB04t89/1O/w1cDnyilFU='; //sesuaikan 
-$channelSecret = 'a54a6170f9be72af721ee1884e9acd85';//sesuaikan
+$channelAccessToken = 'w7L4v1zvtVDWCtY5RDXZxRk7RydlN5A091w1m355d0phgrZgIwzk/N6eQlIERWsI8X5Gn7T/2Y1rNIu9uRLosOsWjLD/Cp8RXN7aZUCT/AlmuHSXDkWQkSpFf4MTsowzPomigaMBiUcC+7lOK2WKvAdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '877cb9c89ad7d964c1f4f4324969b9f8';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -176,15 +176,43 @@ function saveitoffline($keyword) {
 
 
     $json = json_decode($response->raw_body, true);
+    $result .= "Judul : ";
+	$result .= $json['title'];
+	$result .= "\n\nUkuran : ";
+	$result .= $json['urls'][0]['label'];
+	$result .= "\nURL Download : ";
+	$result .= $json['urls'][0]['id'];
+	$result .= "\n\nUkuran : ";
+	$result .= $json['urls'][1]['label'];
+	$result .= "\nURL Download : ";
+	$result .= $json['urls'][1]['id'];
+	$result .= "\n\nUkuran : ";
+	$result .= $json['urls'][2]['label'];
+	$result .= "\nURL Download : ";
+	$result .= $json['urls'][2]['id'];
+	$result .= "\n\nUkuran : ";
+	$result .= $json['urls'][3]['label'];
+	$result .= "\nURL Download : ";
+	$result .= $json['urls'][3]['id'];	
+    return $result;
+}
+function convertbeta($keyword) {
+    $uri = "https://www.saveitoffline.com/process/?url=" . $keyword . '&type=json';
+
+    $response = Unirest\Request::get("$uri");
+
+
+    $json = json_decode($response->raw_body, true);
+    $result['konpert'] .= $keyword;
 	$result['judul'] .= $json['title'];
-	$result['uk0'] .= $json['urls'][0]['label'];
-	$result['url0'] .= $json['urls'][0]['id'];
-	$result['uk1'] .= $json['urls'][1]['label'];
-	$result['url1'] .= $json['urls'][1]['id'];
-	$result['uk2'] .= $json['urls'][2]['label'];	
-	$result['url2'] .= $json['urls'][2]['id'];
-	$result['uk3'] .= $json['urls'][3]['label'];	
-	$result['url3'] .= $json['urls'][3]['id'];	
+	$result['uk1'] .= $json['urls'][0]['label'];
+	$result['url1'] .= $json['urls'][0]['id'];
+	$result['uk2'] .= $json['urls'][1]['label'];
+	$result['url2'] .= $json['urls'][1]['id'];
+	$result['uk3'] .= $json['urls'][2]['label'];
+	$result['url3'] .= $json['urls'][2]['id'];
+	$result['uk4'] .= $json['urls'][3]['label'];
+	$result['url4'] .= $json['urls'][3]['id'];	
     return $result;
 }
 #-------------------------[Fungsi MUSIK]-------------------------#
@@ -598,9 +626,10 @@ if($message['type']=='text') {
 
 } */
 if ($command == '/convert' || $command == '/Convert') {
-        $result = saveitoffline($options);
-        $altText = "Convert Done.";
-        $teks = "Judul : " . $result['judul'];
+        $result = convertbeta($options);
+        $tekes = $result['konpert'];
+        $altText = "Convert Done";
+        $teks = $result['judul'];
         $balas = array(
             'replyToken' => $replyToken,
             'messages' => array(
@@ -609,29 +638,29 @@ if ($command == '/convert' || $command == '/Convert') {
                     'altText' => $altText,
                     'template' => array(
                         'type' => 'buttons',
-                        'title' => 'Silahkan Download',
+                        'title' => 'Convert Selesai',
                         'thumbnailImageUrl' => 'https://fmedia.000webhostapp.com/img/convert.png',
                         'text' => $teks,
                         'actions' => array(
                             array(
                                 'type' => 'uri',
-                                'label' => 'Download : '. $result['uk0'],
-				'uri' => $result['url0']
+                                'label' => $result['uk1'],
+				                'uri' => $result['url1']
                             ),
                             array(
                                 'type' => 'uri',
-                                'label' => 'Download : '. $result['uk1'],
-				'uri' => $result['url1']
+                                'label' => $result['uk2'],
+				                'uri' => $result['url2']
                             ),
                             array(
                                 'type' => 'uri',
-                                'label' => 'Download : '. $result['uk2'],
-				'uri' => $result['url2']
+                                'label' => $result['uk3'],
+				                'uri' => $result['url3']
                             ),
                             array(
                                 'type' => 'uri',
-                                'label' => 'Download : '. $result['uk3'],
-				'uri' => $result['url3']
+                                'label' => $result['uk4'],
+				                'uri' => $result['url4']
                             ),
                         )
                     )
